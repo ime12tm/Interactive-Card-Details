@@ -1,51 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <script src="script.js" defer></script>
+    <title>Interactive Card Details</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-container__sidebar"></div>
+      <div class="form-container__form-section">
+        <form id="CCForm" class="form-container__form-section__form">
+          <div class="form-container__form-section__form__form-group">
+            <label class="form-label" for="cardNumber">Cardholder Name</label>
+            <input class="input-case" type="text" id="cardNumber" placeholder="e.g. Jane Appleseed" maxlength="25" />
+          </div>
+          <div class="form-container__form-section__form__form-group">
+            <label class="form-label" for="cardNumber">Card Number</label>
+            <input
+              class="input-case"
+              type="text"
+              id="cardNumber"
+              placeholder="e.g. 1234 5678 9123 0000"
+              maxlength="16"
+            />
+          </div>
+          <div class="lower-section">
+            <div class="date-section">
+              <label class="form-label" for="expiryMonth">Exp. Date (MM/YY)</label>
+              <div class="date-input">
+                <input class="date-case" type="text" id="expiryMonth" placeholder="MM" maxlength="5" />
+                <input class="date-case" type="text" id="expiryYear" placeholder="YY" maxlength="5" />
+              </div>
+            </div>
+            <div class="cvv-section">
+              <label class="form-label" for="cvv">CVV</label>
+              <input class="cvv-case" type="text" id="cvv" placeholder="e.g 123" maxlength="3" />
+            </div>
+          </div>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+          <button class="form-btn" type="button" onclick="validateCreditCard()">Confirm</button>
+        </form>
+      </div>
+    </div>
+    <div class="card-section card-front"></div>
 
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
 </html>

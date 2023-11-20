@@ -1,0 +1,134 @@
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  height: 100vh;
+}
+.form-container {
+  width: 1440px;
+  display: flex;
+  margin: 0 auto;
+  background-color: #fff;
+  &__sidebar {
+    width: 33.5%;
+    background-color: #21092f;
+  }
+  &__form-section {
+    width: calc(100% - 33.5%);
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 227px;
+    align-items: center;
+    &__form {
+      width: 400px;
+      height: 369px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 9.5px;
+      &__form-group {
+        width: 100%;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+.input-case {
+  width: 100%;
+  border: 1px solid #dfdee0;
+  padding: 11px 191px 11px 16px;
+  border-radius: 8px;
+}
+.lower-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+.date-section {
+  width: 60%;
+}
+
+.date-input {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.date-case {
+  width: 80px;
+  border: 1px solid #dfdee0;
+  padding: 11px 32px 11px 16px;
+  border-radius: 8px;
+}
+.cvv-case {
+  width: 191px;
+  border: 1px solid #dfdee0;
+  padding: 11px 109px 11px 16px;
+  border-radius: 8px;
+}
+.form-label {
+  text-transform: uppercase;
+}
+.form-btn {
+  width: 100%;
+  border: 1px solid #dfdee0;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 156px;
+  background-color: #21092f;
+  color: #fff;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+.card-section {
+  width: 447px;
+  height: 245px;
+  background: linear-gradient(164deg, #6348fe 4.74%, #610595 88.83%);
+  border-radius: 10px;
+}
+.card-front {
+  position: relative;
+  top: 187px;
+  left: 164px;
+  z-index: 2;
+}
+// .form-group {
+//   margin-bottom: 15px;
+// }
+
+// label {
+//   font-weight: bold;
+// }
+
+// input {
+//   padding: 8px;
+//   width: 100%;
+//   box-sizing: border-box;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+// }
+
+// button {
+//   padding: 10px;
+//   background-color: #007bff;
+//   color: #fff;
+//   border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
+// }
+
+// button:hover {
+//   background-color: #0056b3;
+// }
