@@ -1,8 +1,5 @@
 @import "variables.scss";
-* {
-  margin: 0;
-  padding: 0;
-}
+
 body {
   display: flex;
   height: 100vh;
@@ -40,12 +37,12 @@ body {
     }
   }
 }
-
 .section-right {
   width: calc(100% - 33.5%);
   @include flex(row, flex-end, center, 0);
   padding-right: 227px;
   &__form {
+    display: none;
     width: 400px;
     height: 369px;
     @include flex(column, center, center, 0);
@@ -61,14 +58,29 @@ body {
     &__form-btn {
       width: 100%;
       border: 1px solid #dfdee0;
-      font-size: 18px;
-      font-weight: 500;
+      @include font(#fff, 18px, 500, normal);
       padding: 15px 156px;
       background-color: #21092f;
-      color: #fff;
       border-radius: 8px;
       margin-top: 40px;
     }
+  }
+}
+.complete-section {
+  display: none;
+  width: 400px;
+  height: 369px;
+  @include flex(column, center, center, 0);
+  &__logo {
+    padding-bottom: 35px;
+  }
+  &__title {
+    @include font(#000, 28px, 500, 3.422px);
+    padding-bottom: 16px;
+  }
+  &__description {
+    @include font(#8f8694, 18px, 500, normal);
+    padding-bottom: 48px;
   }
 }
 .input-case {
@@ -80,7 +92,6 @@ body {
 .date-section {
   width: 60%;
 }
-
 .date-input {
   display: flex;
   align-items: flex-start;
@@ -100,31 +111,28 @@ body {
 }
 .form-label {
   text-transform: uppercase;
+  font-family: "Space Grotesk", sans-serif;
 }
-
+.logo-card {
+  padding: 28px 0 0 32px;
+}
+.cc-number {
+  @include font(#fff, 28px, 500, 3.422px);
+  text-align: center;
+  margin-top: 64px;
+}
+.cc-lower-text {
+  @include font(#fff, 14px, 500, 2px);
+  @include flex(row, space-evenly, flex-start, 150px);
+  text-transform: uppercase;
+  margin-top: 25.5px;
+}
 // .form-group {
 //   margin-bottom: 15px;
 // }
 
 // label {
 //   font-weight: bold;
-// }
-
-// input {
-//   padding: 8px;
-//   width: 100%;
-//   box-sizing: border-box;
-//   border: 1px solid #ccc;
-//   border-radius: 4px;
-// }
-
-// button {
-//   padding: 10px;
-//   background-color: #007bff;
-//   color: #fff;
-//   border: none;
-//   border-radius: 4px;
-//   cursor: pointer;
 // }
 
 // button:hover {

@@ -1,1 +1,13 @@
-/*# sourceMappingURL=variables.css.map */
+:root {
+  --button-color-hover: #dfdfdf;
+  --white-text: #ffffff;
+  --black-text: #000000;
+  --white-bg: #ffffff;
+  --black-bg: #000000;
+}
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=variables.css.map */

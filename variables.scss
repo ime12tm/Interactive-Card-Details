@@ -1,7 +1,27 @@
+:root {
+  --button-color-hover: #dfdfdf;
+  --white-text: #ffffff;
+  --black-text: #000000;
+  --white-bg: #ffffff;
+  --black-bg: #000000;
+}
+* {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 @mixin flex($direction, $justify, $align, $gap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
   gap: $gap;
+}
+@mixin font($color, $font-size, $font-weight, $lettre-spacing) {
+  font-family: "Space Grotesk", sans-serif;
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $lettre-spacing;
 }
