@@ -14,15 +14,18 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <div class="form-container">
-      <div class="form-container__sidebar"></div>
-      <div class="form-container__form-section">
-        <form id="CCForm" class="form-container__form-section__form">
-          <div class="form-container__form-section__form__form-group">
+    <div class="container">
+      <div class="container__section-left">
+        <div class="container__section-left__card-section container__section-left__card-front"></div>
+        <div class="container__section-left__card-section container__section-left__card-back"></div>
+      </div>
+      <div class="section-right">
+        <form id="CCForm" class="section-right__form">
+          <div class="section-right__form__form-group">
             <label class="form-label" for="cardNumber">Cardholder Name</label>
             <input class="input-case" type="text" id="cardNumber" placeholder="e.g. Jane Appleseed" maxlength="25" />
           </div>
-          <div class="form-container__form-section__form__form-group">
+          <div class="section-right__form__form-group">
             <label class="form-label" for="cardNumber">Card Number</label>
             <input
               class="input-case"
@@ -32,12 +35,12 @@
               maxlength="16"
             />
           </div>
-          <div class="lower-section">
+          <div class="section-right__form__lower-section">
             <div class="date-section">
               <label class="form-label" for="expiryMonth">Exp. Date (MM/YY)</label>
               <div class="date-input">
-                <input class="date-case" type="text" id="expiryMonth" placeholder="MM" maxlength="5" />
-                <input class="date-case" type="text" id="expiryYear" placeholder="YY" maxlength="5" />
+                <input class="date-case" type="text" id="expiryMonth" placeholder="MM" maxlength="2" />
+                <input class="date-case" type="text" id="expiryYear" placeholder="YY" maxlength="2" />
               </div>
             </div>
             <div class="cvv-section">
@@ -45,12 +48,10 @@
               <input class="cvv-case" type="text" id="cvv" placeholder="e.g 123" maxlength="3" />
             </div>
           </div>
-
-          <button class="form-btn" type="button" onclick="validateCreditCard()">Confirm</button>
+          <button class="section-right__form__form-btn" type="button" onclick="validateCreditCard()">Confirm</button>
         </form>
       </div>
     </div>
-    <div class="card-section card-front"></div>
 
     <!-- <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by

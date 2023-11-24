@@ -1,10 +1,4 @@
-/* .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-} */
+@import "variables.scss";
 * {
   margin: 0;
   padding: 0;
@@ -13,35 +7,67 @@ body {
   display: flex;
   height: 100vh;
 }
-.form-container {
+.container {
   width: 1440px;
   display: flex;
   margin: 0 auto;
   background-color: #fff;
-  &__sidebar {
+  &__section-left {
     width: 33.5%;
-    background-color: #21092f;
+    background-image: url("./images/bg-main-desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flex(column, flex-start, stretch, 0);
+    &__card-section {
+      width: 447px;
+      height: 245px;
+      border-radius: 10px;
+    }
+    &__card-front {
+      background-image: url("./images/bg-card-front.png");
+      position: relative;
+      top: 187px;
+      left: 164px;
+      z-index: 2;
+    }
+    &__card-back {
+      position: relative;
+      top: 224px;
+      left: 258px;
+      background-image: url("./images/bg-card-back.png");
+      z-index: 1;
+    }
   }
-  &__form-section {
-    width: calc(100% - 33.5%);
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 227px;
-    align-items: center;
-    &__form {
-      width: 400px;
-      height: 369px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 9.5px;
-      &__form-group {
-        width: 100%;
-        margin-bottom: 15px;
-        display: flex;
-        flex-direction: column;
-      }
+}
+
+.section-right {
+  width: calc(100% - 33.5%);
+  @include flex(row, flex-end, center, 0);
+  padding-right: 227px;
+  &__form {
+    width: 400px;
+    height: 369px;
+    @include flex(column, center, center, 0);
+    padding: 9.5px;
+    &__form-group {
+      width: 100%;
+      margin-bottom: 15px;
+      @include flex(column, flex-start, stretch, 0);
+    }
+    &__lower-section {
+      @include flex(row, flex-start, flex-start, 10px);
+    }
+    &__form-btn {
+      width: 100%;
+      border: 1px solid #dfdee0;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 15px 156px;
+      background-color: #21092f;
+      color: #fff;
+      border-radius: 8px;
+      margin-top: 40px;
     }
   }
 }
@@ -50,12 +76,6 @@ body {
   border: 1px solid #dfdee0;
   padding: 11px 191px 11px 16px;
   border-radius: 8px;
-}
-.lower-section {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
 }
 .date-section {
   width: 60%;
@@ -81,29 +101,7 @@ body {
 .form-label {
   text-transform: uppercase;
 }
-.form-btn {
-  width: 100%;
-  border: 1px solid #dfdee0;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 15px 156px;
-  background-color: #21092f;
-  color: #fff;
-  border-radius: 8px;
-  margin-top: 40px;
-}
-.card-section {
-  width: 447px;
-  height: 245px;
-  background: linear-gradient(164deg, #6348fe 4.74%, #610595 88.83%);
-  border-radius: 10px;
-}
-.card-front {
-  position: relative;
-  top: 187px;
-  left: 164px;
-  z-index: 2;
-}
+
 // .form-group {
 //   margin-bottom: 15px;
 // }
