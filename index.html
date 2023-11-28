@@ -25,17 +25,19 @@
           <img class="logo-card" src="./images/logo-card.png" alt="logo credit card" />
           <h2 class="cc-number">0000 0000 0000 0000</h2>
           <div class="cc-lower-text">
-            <h3>Jane Appleseed</h3>
-            <h3>00/00</h3>
+            <h3 id="CCName">Jane Appleseed</h3>
+            <h3 id="CCExpiryDate"><span id="CCMonth">00</span>/<span id="CCYear">00</span></h3>
           </div>
         </div>
-        <div class="container__section-left__card-section container__section-left__card-back"></div>
+        <div class="container__section-left__card-section container__section-left__card-back">
+          <h3 class="CVV-number">123</h3>
+        </div>
       </div>
       <div class="section-right">
         <form id="CCForm" class="section-right__form">
           <div class="section-right__form__form-group">
-            <label class="form-label" for="cardNumber">Cardholder Name</label>
-            <input class="input-case" type="text" id="cardNumber" placeholder="e.g. Jane Appleseed" maxlength="25" />
+            <label class="form-label" for="cardName">Cardholder Name</label>
+            <input class="input-case" type="text" id="cardName" placeholder="e.g. Jane Appleseed" maxlength="25" />
           </div>
           <div class="section-right__form__form-group">
             <label class="form-label" for="cardNumber">Card Number</label>
@@ -44,7 +46,7 @@
               type="text"
               id="cardNumber"
               placeholder="e.g. 1234 5678 9123 0000"
-              maxlength="16"
+              maxlength="19"
             />
           </div>
           <div class="section-right__form__lower-section">
@@ -60,14 +62,16 @@
               <input class="cvv-case" type="text" id="cvv" placeholder="e.g 123" maxlength="3" />
             </div>
           </div>
-          <button class="section-right__form__form-btn" type="button" onclick="validateCreditCard()">Confirm</button>
+          <button class="section-right__form__form-btn" type="button" id="confirmBtn">Confirm</button>
         </form>
-        <!-- <div class="complete-section">
-          <img class="complete-section__logo" src="./images/icon-complete.svg" alt="logo credit card" />
-          <h2 class="complete-section__title">THANK YOU!</h2>
-          <p class="complete-section__description">We've added your card details</p>
-          <button class="section-right__form__form-btn" type="button">Continue</button>
-        </div> -->
+        <div class="complete-section">
+          <div class="complete-section__content">
+            <img class="complete-section__logo" src="./images/icon-complete.svg" alt="logo credit card" />
+            <h2 class="complete-section__title">THANK YOU!</h2>
+            <p class="complete-section__description">We've added your card details.</p>
+            <button class="section-right__form__form-btn" type="button" id="completeBtn">Continue</button>
+          </div>
+        </div>
       </div>
     </div>
 
