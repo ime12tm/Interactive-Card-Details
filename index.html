@@ -37,8 +37,9 @@
         <form id="CCForm" class="section-right__form">
           <div class="section-right__form__form-group">
             <label class="form-label" for="cardName">Cardholder Name</label>
-            <input class="input-case" type="text" id="cardName" placeholder="e.g. Jane Appleseed" maxlength="25" />
+            <input class="input-case" type="text" id="cardName" placeholder="e.g. Jane Appleseed" maxlength="16" />
           </div>
+          <div id="errorName"></div>
           <div class="section-right__form__form-group">
             <label class="form-label" for="cardNumber">Card Number</label>
             <input
@@ -48,6 +49,7 @@
               placeholder="e.g. 1234 5678 9123 0000"
               maxlength="19"
             />
+            <div id="errorNumber"></div>
           </div>
           <div class="section-right__form__lower-section">
             <div class="date-section">
@@ -56,15 +58,17 @@
                 <input class="date-case" type="text" id="expiryMonth" placeholder="MM" maxlength="2" />
                 <input class="date-case" type="text" id="expiryYear" placeholder="YY" maxlength="2" />
               </div>
+              <div id="errorDate"></div>
             </div>
             <div class="cvv-section">
               <label class="form-label" for="cvv">CVV</label>
               <input class="cvv-case" type="text" id="cvv" placeholder="e.g 123" maxlength="3" />
+              <div id="errorCVV"></div>
             </div>
           </div>
           <button class="section-right__form__form-btn" type="button" id="confirmBtn">Confirm</button>
         </form>
-        <div class="complete-section">
+        <div class="complete-section" style="display: none">
           <div class="complete-section__content">
             <img class="complete-section__logo" src="./images/icon-complete.svg" alt="logo credit card" />
             <h2 class="complete-section__title">THANK YOU!</h2>
